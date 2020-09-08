@@ -1,0 +1,77 @@
+%nav-text {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  @include transition(color);
+  color: $main-text-color;
+}
+.head-container {
+  display: flex;
+  align-items: center;
+}
+.header-page.portfolio{
+  border-bottom: 1px solid #ECECEC;
+}
+.nav-menu {
+  display: flex;
+}
+.site-nav {
+  margin-left: 85px;
+  display: flex;
+    .item:not(:last-child) {
+      margin-right: 50px;
+    }
+}
+.link-icon {
+  margin-right: 10px;
+  fill: currentColor;
+  width: 16px;
+  height: 16px;
+}
+
+.contacts {
+  margin-left: auto;
+  display: flex;
+    .item + .item {
+      margin-left: 30px;
+    }
+}
+.logo {
+  text-decoration: none;
+  color: $title-text-color;
+}
+
+.hd-nav {
+  display: inline-block;
+  @extend %nav-text;
+    &:hover, &:active, &:focus{  
+    color:$accent-color;
+  }
+}
+.link-nav {
+  display: flex;
+  align-items: center;
+  @extend %nav-text;
+  &:hover, &:active, &:focus{  
+    color:$accent-color;
+  }
+}
+.active-link {
+  position: relative;
+  color: $accent-color;
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color:$accent-color;
+    border-radius: 4px;
+  }
+}

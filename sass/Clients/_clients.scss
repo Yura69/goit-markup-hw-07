@@ -1,0 +1,27 @@
+.clients-list {
+  display: flex;
+  .item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.logo-clien-link {
+  display: flex;
+  width: 170px;
+  height: 90px;
+  color: $border-color;
+  border: solid 1px $border-color;
+  border-radius: 4px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  @include transition(color);
+    &:focus,
+    &:hover {
+      color: $accent-color;
+      border-color: $accent-color;
+    }
+}
+.link-icon-client {
+  fill: currentColor;
+}
