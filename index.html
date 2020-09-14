@@ -10,12 +10,20 @@
 
 <body>
 
-  <header class="header-page">
-    <div class="container head-container">
+  <header class="header-page container">
+    <div class="mobail-menu">
       <a href="index.html" class="logo">
         <h2 class="web-st mar-pad"><span class="Web-bl">Web</span> Studio</h2>
       </a>
+      <button type="button" class="menu-button is-open" aria-expanded="false" data-menu-buuton>
+        <svg width="30px" height="30px" aria-label="Переключатель мобильного меню">
+          <use class="icon-cross" href="./images/symbol-defs.svg#icon-cross"></use>
+          <use class="icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
+        </svg>
+      </button></div>
+    <div class="head-container">
       <nav class="nav-menu">
+
         <ul class="mar-pad site-nav">
           <li class="item"><a href="index.html" class="hd-nav active-link">Студия</a></li>
           <li class="item"><a href="portfolio.html" class="hd-nav">Портфолио</a></li>
@@ -88,7 +96,7 @@
       </div>
     </section>
     <section class="section">
-      <div class="container">
+      <div class="container dspl-none">
         <h2 class="heading mar-pad">Чем мы занимаемся</h2>
         <ul class="our-job mar-pad">
           <li class="item">
@@ -111,8 +119,7 @@
         <h2 class="heading mar-pad">Наша команда</h2>
         <ul class="people-our-team mar-pad">
           <li class="item">
-            <img src="./images/ourteam/imgteem 1.jpg" width="270" height="260" alt="Photo: Николай Кучеренко"
-              class="tm-photo" />
+            <img src="./images/ourteam/imgteem 1.jpg" alt="Photo: Николай Кучеренко" class="tm-photo" />
             <p class="tm-name mar-pad">Николай Кучеренко</p>
             <p class="tm-position mar-pad">Product Designer</p>
             <ul class="soc-net mar-pad">
@@ -140,8 +147,7 @@
             </ul>
           </li>
           <li class="item">
-            <img src="./images/ourteam/imgteem 2.jpg" width="270" height="260" alt="Photo: Ольга Иванова"
-              class="tm-photo" />
+            <img src="./images/ourteam/imgteem 2.jpg" alt="Photo: Ольга Иванова" class="tm-photo" />
             <p class="tm-name mar-pad">Ольга Иванова</p>
             <p class="tm-position mar-pad">Frontend Developer</p>
             <ul class="soc-net mar-pad">
@@ -169,8 +175,7 @@
             </ul>
           </li>
           <li class="item">
-            <img src="./images/ourteam/imgteem 3.jpg" width="270" height="260" alt="Photo: Андрей Шевченко"
-              class="tm-photo" />
+            <img src="./images/ourteam/imgteem 3.jpg" alt="Photo: Андрей Шевченко" class="tm-photo" />
             <p class="tm-name mar-pad">Андрей Шевченко</p>
             <p class="tm-position mar-pad">Marketing</p>
             <ul class="soc-net mar-pad">
@@ -198,8 +203,7 @@
             </ul>
           </li>
           <li class="item">
-            <img src="./images/ourteam/imgteem 4.jpg" width="270" height="260" alt="Photo: Иван Николаев"
-              class="tm-photo" />
+            <img src="./images/ourteam/imgteem 4.jpg" alt="Photo: Иван Николаев" class="tm-photo" />
             <p class="tm-name mar-pad">Иван Николаев</p>
             <p class="tm-position mar-pad">UI Designer</p>
             <ul class="soc-net mar-pad">
@@ -230,7 +234,7 @@
       </div>
     </section>
     <section class="section">
-      <div class="container">
+      <div class="container clients-container">
         <h2 class="heading mar-pad">Постоянные клиенты</h2>
         <ul class="clients-list mar-pad">
           <li class="item">
@@ -269,7 +273,7 @@
   </main>
   <footer class="footer">
     <div class="footer-container container">
-      <div><a href="index.html" class="footer-logo logo">
+      <div class="footer-box"><a href="index.html" class="footer-logo logo">
           <h2 class="web-st white mar-pad"><span class="Web-bl">Web </span>Studio</h2>
         </a>
         <address>
@@ -362,6 +366,7 @@
       <button data-modal-close class="close-btn"> &#10006;</button>
     </div>
   </div>
+  <script src="./js/menu.js"></script>
   <script src="./js/modal.js">
   </script>
 </body>

@@ -10,18 +10,66 @@
   color: $main-text-color;
 }
 .head-container {
-  display: flex;
-  align-items: center;
+  position: absolute;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: center;
+  }
+}
+.header-page {
+  position: relative;
+  @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: center;
+     
+  }
+}
+.mobail-menu{
+  @media screen and (max-width: 767px){
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    height: 60px;
+  }
+}
+.menu-button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color:  transparent;
+  color: $title-text-color;
+  .icon-cross {
+    display: none;
+    fill: currentColor;
+  }
+  &.is-open .icon-cross {
+    display: block;
+  }
+   &.is-open .icon-menu {
+    display: none;
+  }
+   .icon-menu {
+    fill: currentColor;
+  }
 }
 .header-page.portfolio{
   border-bottom: 1px solid #ECECEC;
 }
 .nav-menu {
-  display: flex;
+  @media screen and (min-width: 1200px) {
+      display: flex;
+  }
+  
 }
 .site-nav {
   margin-left: 85px;
-  display: flex;
+  @media screen and (min-width: 1200px) {
+      display: flex;
+  }
     .item:not(:last-child) {
       margin-right: 50px;
     }
@@ -34,13 +82,17 @@
 }
 
 .contacts {
-  margin-left: auto;
-  display: flex;
+  @media screen and (min-width: 1200px) {
+       margin-left: auto;
+       display: flex;
     .item + .item {
       margin-left: 30px;
     }
+  }
+ 
 }
 .logo {
+  display: block;
   text-decoration: none;
   color: $title-text-color;
 }
@@ -53,8 +105,13 @@
   }
 }
 .link-nav {
-  display: flex;
-  align-items: center;
+  
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: center;
+  }
+
+  
   @extend %nav-text;
   &:hover, &:active, &:focus{  
     color:$accent-color;

@@ -3,10 +3,22 @@
     align-items: center;
 }
 .footer-container {
-    @extend %flex;
   padding-bottom: 60px;
   padding-top: 60px;
-  justify-content: space-between;
+  @media screen and (max-width: 767px) {
+   text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  
+}
+.footer-box{
+  @media screen and (max-width: 767px) {
+   margin-bottom: 60px;
+  }
 }
 .footer-logo {
   display: inline-block;
@@ -14,6 +26,7 @@
 }
 .ftr-sn-list {
   display: flex;
+  justify-content: center;
   margin-top: 20px;
     .item:not(:last-child) {
     margin-right: 10px;
@@ -35,6 +48,9 @@
     .link-icon-sn {
         fill: currentColor;
     }
+     @media screen and (max-width: 767px){
+    margin-bottom: 60px;
+  }
 }
 .ftr-link {
   font-weight: 400;
@@ -51,12 +67,18 @@
     }
 }
 .footer-form {
-  display: flex;
-  align-items: flex-end;
+  @media screen and (max-width: 767px){
+    
+  }
+  @media screen and (min-width: 1200px){
+      display: flex;
+      align-items: flex-end;
+
+  }
 }
 .label-footer > input[type="email"]{
   display: block;
-  width: 358px;
+  width: 100%;
   padding: 15px;
   font-weight: 400;
   font-size: 16px;
@@ -67,8 +89,12 @@
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+   @media screen and (max-width: 767px){
+    margin-bottom: 20px;
+  }
 }
 .form-title{
+  margin-top: 0;
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 14px;
@@ -82,7 +108,7 @@
   width: 200px;
   height: 50px;
   padding: 10px 29px;
-    @extend %flex;
+    // @extend %flex;
   text-align: center;
   letter-spacing: 0.06em;
   font-weight: 700;

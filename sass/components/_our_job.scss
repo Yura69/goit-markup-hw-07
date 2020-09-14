@@ -3,6 +3,11 @@
   letter-spacing: 0.03em;
   text-align: center;
 }
+.dspl-none{
+  @media screen and (max-width: 1199px){
+      display: none;
+  }
+}
 .our-job {
   display: flex;
    .item:not(:last-child) {

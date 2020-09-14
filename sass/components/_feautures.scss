@@ -1,11 +1,22 @@
 .section-feautures {
   padding-top: 94px;
+  @media screen and (max-width: 767px) {
+    padding-top: 60px;
+  }
 }
 .feautures {
-  display: flex;
+  // display: flex;
     .item:not(:last-child) {
-        margin-right: 30px;
+      @media screen and (max-width:767px){
+        margin-bottom: 30px;        
+      }
+      .item:last-child {
+      @media screen and (max-width:767px){
+        margin-bottom: 60px;        
+      }
+        // margin-right: 30px;
     }
+  }
     .icon-feautures-bg {
         display: flex;
         height: 120px;
@@ -17,7 +28,6 @@
     }
 }
 
-.feautures 
 
 .main-heading {
   margin-bottom: 10px;
